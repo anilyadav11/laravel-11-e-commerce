@@ -1,121 +1,58 @@
-<!--Author: W3layouts
-Author URL: http://w3layouts.com
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
--->
-<!DOCTYPE HTML>
-<html>
+<!doctype html>
+<html lang="en">
+<!--begin::Head-->
 
 <head>
-    <title>Shoppy an Admin Panel Category Flat Bootstrap Responsive Website Template | Home :: w3layouts</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="keywords" content="Shoppy Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
-Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
-    <script type="application/x-javascript">
-        addEventListener("load", function() {
-            setTimeout(hideURLbar, 0);
-        }, false);
-
-        function hideURLbar() {
-            window.scrollTo(0, 1);
-        }
-    </script>
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <link href="{{asset('admin/css/bootstrap.css')}}" rel="stylesheet" type="text/css" media="all">
-    <!-- Custom Theme files -->
-    <link href="{{asset('admin/css/style.css')}}" rel="stylesheet" type="text/css" media="all" />
-    <!--js-->
-    <script src="{{asset('admin/js/jquery-2.1.1.min.js')}}"></script>
-    <!--icons-css-->
-    <link href="{{asset('admin/css/font-awesome.css')}}" rel="stylesheet">
-    <!--Google Fonts-->
-    <link href='//fonts.googleapis.com/css?family=Carrois+Gothic' rel='stylesheet' type='text/css'>
-    <link href='//fonts.googleapis.com/css?family=Work+Sans:400,500,600' rel='stylesheet' type='text/css'>
-    <!--static chart-->
-    <script src="js/Chart.min.js"></script>
-    <!--//charts-->
-    <!-- geo chart -->
-    <script src="//cdn.jsdelivr.net/modernizr/2.8.3/modernizr.min.js" type="text/javascript"></script>
-    <script>
-        window.modernizr || document.write('<script src="lib/modernizr/modernizr-custom.js"><\/script>')
-    </script>
-    <!--<script src="lib/html5shiv/html5shiv.js"></script>-->
-    <!-- Chartinator  -->
-    <script src="js/chartinator.js"></script>
-    <script type="text/javascript">
-        jQuery(function($) {
-
-            var chart3 = $('#geoChart').chartinator({
-                tableSel: '.geoChart',
-
-                columns: [{
-                    role: 'tooltip',
-                    type: 'string'
-                }],
-
-                colIndexes: [2],
-
-                rows: [
-                    ['China - 2015'],
-                    ['Colombia - 2015'],
-                    ['France - 2015'],
-                    ['Italy - 2015'],
-                    ['Japan - 2015'],
-                    ['Kazakhstan - 2015'],
-                    ['Mexico - 2015'],
-                    ['Poland - 2015'],
-                    ['Russia - 2015'],
-                    ['Spain - 2015'],
-                    ['Tanzania - 2015'],
-                    ['Turkey - 2015']
-                ],
-
-                ignoreCol: [2],
-
-                chartType: 'GeoChart',
-
-                chartAspectRatio: 1.5,
-
-                chartZoom: 1.75,
-
-                chartOffset: [-12, 0],
-
-                chartOptions: {
-
-                    width: null,
-
-                    backgroundColor: '#fff',
-
-                    datalessRegionColor: '#F5F5F5',
-
-                    region: 'world',
-
-                    resolution: 'countries',
-
-                    legend: 'none',
-
-                    colorAxis: {
-
-                        colors: ['#679CCA', '#337AB7']
-                    },
-                    tooltip: {
-
-                        trigger: 'focus',
-
-                        isHtml: true
-                    }
-                }
-
-
-            });
-        });
-    </script>
-    <!--geo chart-->
-
-    <!--skycons-icons-->
-    <script src="{{asset('admin/js/skycons.js')}}"></script>
-    <!--//skycons-icons-->
+    <title>Ecommerce</title>
+    <!--begin::Primary Meta Tags-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="title" content="AdminLTE v4 | Dashboard" />
+    <meta name="author" content="ColorlibHQ" />
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+    <meta
+        name="description"
+        content="AdminLTE is a Free Bootstrap 5 Admin Dashboard, 30 example pages using Vanilla JS." />
+    <meta
+        name="keywords"
+        content="bootstrap 5, bootstrap, bootstrap 5 admin dashboard, bootstrap 5 dashboard, bootstrap 5 charts, bootstrap 5 calendar, bootstrap 5 datepicker, bootstrap 5 tables, bootstrap 5 datatable, vanilla js datatable, colorlibhq, colorlibhq dashboard, colorlibhq admin dashboard" />
+    <!--end::Primary Meta Tags-->
+    <!--begin::Fonts-->
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@fontsource/source-sans-3@5.0.12/index.css"
+        integrity="sha256-tXJfXfp6Ewt1ilPzLDtQnJV4hclT9XuaZUKyUvmyr+Q="
+        crossorigin="anonymous" />
+    <!--end::Fonts-->
+    <!--begin::Third Party Plugin(OverlayScrollbars)-->
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/overlayscrollbars@2.10.1/styles/overlayscrollbars.min.css"
+        integrity="sha256-tZHrRjVqNSRyWg2wbppGnT833E/Ys0DHWGwT04GiqQg="
+        crossorigin="anonymous" />
+    <!--end::Third Party Plugin(OverlayScrollbars)-->
+    <!--begin::Third Party Plugin(Bootstrap Icons)-->
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+        integrity="sha256-9kPW/n5nn53j4WMRYAxe9c1rCY96Oogo/MKSVdKzPmI="
+        crossorigin="anonymous" />
+    <!--end::Third Party Plugin(Bootstrap Icons)-->
+    <!--begin::Required Plugin(AdminLTE)-->
+    <link rel="stylesheet" href="{{asset('admin/css/adminlte.css')}}" />
+    <!--end::Required Plugin(AdminLTE)-->
+    <!-- apexcharts -->
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/apexcharts@3.37.1/dist/apexcharts.css"
+        integrity="sha256-4MX+61mt9NVvvuPjUWdUdyfZfxSB1/Rf9WtqRHgG5S0="
+        crossorigin="anonymous" />
+    <!-- jsvectormap -->
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/jsvectormap@1.5.3/dist/css/jsvectormap.min.css"
+        integrity="sha256-+uGLJmmTKOqBr+2E6KDYs/NRsHxSkONXFHUL0fy2O/4="
+        crossorigin="anonymous" />
 </head>
-
-<body>
+<!--end::Head-->
+<!--begin::Body-->

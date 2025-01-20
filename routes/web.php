@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminAuthController;
+use App\Http\Controllers\ProductController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -15,6 +16,7 @@ Route::prefix('admin')->name('admin.')->group(function () {
     Route::middleware('auth:admin')->group(function () {
         Route::view('/dashboard', 'admin.dashboard')->name('dashboard');
         Route::post('/logout', [AdminAuthController::class, 'logout'])->name('logout');
+        route::resource('product', ProductController::class);
     });
 })
 ;
